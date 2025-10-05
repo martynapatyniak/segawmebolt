@@ -1,0 +1,137 @@
+/* Responsive Design Styles */
+
+/* Mobile devices (up to 768px) */
+@media (max-width: 768px) {
+    .chat-container {
+        height: 100vh;
+        border-radius: 0;
+        margin: 0;
+    }
+    
+    .chat-header {
+        padding: 10px 15px;
+    }
+    
+    .chat-title h3 {
+        font-size: 16px;
+    }
+    
+    .chat-controls {
+        gap: 5px;
+    }
+    
+    .control-btn {
+        padding: 6px;
+        font-size: 14px;
+    }
+    
+    .messages-container {
+        padding: 10px;
+    }
+    
+    .message {
+        margin-bottom: 10px;
+    }
+    
+    .message-content {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+    
+    .chat-input {
+        padding: 10px 15px;
+    }
+    
+    .input-container {
+        gap: 8px;
+    }
+    
+    .message-input {
+        font-size: 16px; /* Prevents zoom on iOS */
+        padding: 10px 12px;
+    }
+    
+    .send-btn {
+        padding: 10px 12px;
+        min-width: 44px; /* Touch target size */
+    }
+    
+    .emoji-picker {
+        width: 100%;
+        max-width: none;
+        left: 0;
+        right: 0;
+        bottom: 60px;
+    }
+    
+    .settings-content {
+        width: 95%;
+        margin: 10px;
+    }
+}
+
+/* Tablet devices (769px to 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .chat-container {
+        flex: 1;
+        margin: 0;
+    }
+    
+    .messages-container {
+        padding: 15px;
+    }
+    
+    .emoji-picker {
+        width: 300px;
+    }
+}
+
+/* Large screens (1025px and up) */
+@media (min-width: 1025px) {
+    .chat-container {
+        flex: 1;
+        margin: 0;
+    }
+    
+    .emoji-picker {
+        width: 350px;
+    }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .control-btn i,
+    .send-btn i {
+        transform: scale(0.9);
+    }
+}
+
+/* Landscape orientation on mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+    .chat-container {
+        height: 100vh;
+    }
+    
+    .messages-container {
+        max-height: calc(100vh - 120px);
+    }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    .chat-container {
+        background: #2d3748;
+        color: #e2e8f0;
+    }
+    
+    .message-content {
+        background: #4a5568;
+        color: #e2e8f0;
+    }
+    
+    .message-input {
+        background: #4a5568;
+        color: #e2e8f0;
+        border-color: #718096;
+    }
+}

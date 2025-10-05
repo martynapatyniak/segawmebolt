@@ -1,0 +1,185 @@
+/* Sidebar Styles */
+.sidebar {
+    width: 250px;
+    min-width: 200px;
+    background: var(--bg-secondary, #2c3e50);
+    border-right: 1px solid var(--border-color, #34495e);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.sidebar-header {
+    padding: var(--spacing-md, 16px);
+    border-bottom: 1px solid var(--border-color, #34495e);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--bg-primary, #34495e);
+}
+
+.sidebar-header h3 {
+    margin: 0;
+    color: var(--text-primary, #ecf0f1);
+    font-size: var(--font-size-lg, 18px);
+    font-weight: 600;
+}
+
+.add-room-btn {
+    background: none;
+    border: none;
+    color: var(--text-muted, #95a5a6);
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.add-room-btn:hover {
+    background: var(--bg-secondary, #2c3e50);
+    color: var(--text-primary, #ecf0f1);
+}
+
+.room-tabs {
+    flex: 1;
+    overflow-y: auto;
+    padding: var(--spacing-sm, 8px);
+}
+
+.sidebar .tab {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs, 6px);
+    padding: var(--spacing-xs, 6px) var(--spacing-sm, 10px);
+    margin-bottom: var(--spacing-xs, 4px);
+    border-radius: var(--border-radius-sm, 4px);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    color: var(--text-muted, #95a5a6);
+    font-size: var(--font-size-sm, 14px);
+}
+
+.sidebar .tab:hover {
+    background: var(--bg-primary, #34495e);
+    color: var(--text-primary, #ecf0f1);
+}
+
+.sidebar .tab.active {
+    background: var(--primary-color, #3498db);
+    color: var(--text-light, #ffffff);
+}
+
+.sidebar .tab i {
+    font-size: var(--font-size-xs, 12px);
+}
+
+.unread-count {
+    background: var(--danger-color, #e74c3c);
+    color: var(--text-light, #ffffff);
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: var(--font-size-xs, 12px);
+    font-weight: 600;
+    margin-left: auto;
+}
+
+.sidebar-footer {
+    padding: var(--spacing-md, 16px);
+    border-top: 1px solid var(--border-color, #34495e);
+    background: var(--bg-primary, #34495e);
+}
+
+.online-users {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm, 8px);
+}
+
+.online-count {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs, 4px);
+    color: var(--text-muted, #95a5a6);
+    font-size: var(--font-size-sm, 14px);
+}
+
+.online-indicator {
+    color: var(--success-color, #27ae60);
+    font-size: var(--font-size-xs, 12px);
+}
+
+/* Top Users Section */
+.top-users-section {
+    background: var(--bg-secondary, #2c3e50);
+    border-radius: var(--border-radius, 6px);
+    padding: var(--spacing-md, 16px);
+    margin: var(--spacing-md, 16px) var(--spacing-md, 16px) var(--spacing-md, 16px) 0;
+}
+
+.top-users-header {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm, 8px);
+    margin-bottom: var(--spacing-md, 16px);
+    color: var(--warning-color, #f39c12);
+    font-weight: 600;
+}
+
+.top-users-header i {
+    color: var(--warning-color, #f39c12);
+}
+
+.statistics {
+    margin-bottom: var(--spacing-lg, 24px);
+}
+
+.stat-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-sm, 8px) 0;
+    color: var(--text-muted, #95a5a6);
+    font-size: var(--font-size-sm, 14px);
+}
+
+.stat-value {
+    color: var(--text-primary, #ecf0f1);
+    font-weight: 600;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .sidebar {
+        width: 220px;
+        min-width: 180px;
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        border-radius: 0;
+    }
+    
+    .top-users-section {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar {
+        position: fixed;
+        left: -300px;
+        top: 0;
+        height: 100vh;
+        z-index: 1000;
+        transition: left 0.3s ease;
+    }
+    
+    .sidebar.open {
+        left: 0;
+    }
+}

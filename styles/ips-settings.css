@@ -1,0 +1,468 @@
+/* IPS Advanced Settings Styles */
+.ips-settings-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ips-settings-modal .modal-content {
+    background: #fff;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 1000px;
+    height: 80%;
+    max-height: 700px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.ips-settings-modal .modal-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ips-settings-modal .modal-header h2 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.ips-settings-modal .modal-close {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+    padding: 0;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background-color 0.2s;
+}
+
+.ips-settings-modal .modal-close:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.ips-settings-modal .modal-body {
+    flex: 1;
+    display: flex;
+    overflow: hidden;
+}
+
+.settings-sidebar {
+    width: 250px;
+    background: #f8f9fa;
+    border-right: 1px solid #e9ecef;
+    overflow-y: auto;
+}
+
+.settings-nav {
+    padding: 20px 0;
+}
+
+.settings-nav-btn {
+    display: block;
+    width: 100%;
+    padding: 12px 20px;
+    background: none;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    font-size: 14px;
+    color: #495057;
+    transition: all 0.2s;
+    border-left: 3px solid transparent;
+}
+
+.settings-nav-btn:hover {
+    background-color: #e9ecef;
+    color: #212529;
+}
+
+.settings-nav-btn.active {
+    background-color: #fff;
+    color: #667eea;
+    border-left-color: #667eea;
+    font-weight: 600;
+}
+
+.settings-content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.settings-section {
+    max-width: 700px;
+}
+
+.settings-section h3 {
+    margin: 0 0 20px 0;
+    color: #212529;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.settings-section h4 {
+    margin: 20px 0 15px 0;
+    color: #495057;
+    font-size: 16px;
+    font-weight: 600;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #e9ecef;
+}
+
+.settings-section h5 {
+    margin: 15px 0 10px 0;
+    color: #6c757d;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.setting-item {
+    margin-bottom: 15px;
+}
+
+.setting-label {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #495057;
+    cursor: pointer;
+    margin-bottom: 8px;
+}
+
+.setting-label input[type="checkbox"] {
+    margin-right: 10px;
+    transform: scale(1.2);
+}
+
+.setting-group {
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.setting-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.setting-row:last-child {
+    margin-bottom: 0;
+}
+
+.setting-row label {
+    min-width: 140px;
+    font-size: 13px;
+    color: #6c757d;
+    font-weight: 500;
+}
+
+.setting-row input,
+.setting-row select {
+    flex: 1;
+    padding: 8px 12px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-size: 13px;
+    transition: border-color 0.2s;
+}
+
+.setting-row input:focus,
+.setting-row select:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.2);
+}
+
+.setting-row input[type="color"] {
+    width: 60px;
+    height: 36px;
+    padding: 2px;
+    cursor: pointer;
+}
+
+.group-settings {
+    background: #fff;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.group-checkboxes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.feature-settings {
+    background: #fff;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.ips-settings-modal .modal-footer {
+    background: #f8f9fa;
+    padding: 20px;
+    border-top: 1px solid #e9ecef;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.ips-settings-modal .btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ips-settings-modal .btn-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.ips-settings-modal .btn-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.ips-settings-modal .btn-secondary {
+    background: #6c757d;
+    color: white;
+}
+
+.ips-settings-modal .btn-secondary:hover {
+    background: #5a6268;
+    transform: translateY(-1px);
+}
+
+/* Przycisk otwierania ustawień */
+#ips-advanced-settings-btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-left: 10px;
+}
+
+#ips-advanced-settings-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+#ips-advanced-settings-btn:active {
+    transform: translateY(0);
+}
+
+/* Responsywność */
+@media (max-width: 768px) {
+    .ips-settings-modal .modal-content {
+        width: 95%;
+        height: 90%;
+        margin: 20px;
+    }
+    
+    .ips-settings-modal .modal-body {
+        flex-direction: column;
+    }
+    
+    .settings-sidebar {
+        width: 100%;
+        height: auto;
+        max-height: 150px;
+        border-right: none;
+        border-bottom: 1px solid #e9ecef;
+    }
+    
+    .settings-nav {
+        display: flex;
+        overflow-x: auto;
+        padding: 10px;
+    }
+    
+    .settings-nav-btn {
+        white-space: nowrap;
+        min-width: 150px;
+        text-align: center;
+        border-left: none;
+        border-bottom: 3px solid transparent;
+    }
+    
+    .settings-nav-btn.active {
+        border-left: none;
+        border-bottom-color: #667eea;
+    }
+    
+    .setting-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .setting-row label {
+        min-width: auto;
+        margin-bottom: 5px;
+    }
+    
+    .setting-row input,
+    .setting-row select {
+        width: 100%;
+    }
+    
+    .group-checkboxes {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Animacje */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.ips-settings-modal .modal-content {
+    animation: slideIn 0.3s ease-out;
+}
+
+/* Scrollbar styling */
+.settings-sidebar::-webkit-scrollbar,
+.settings-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.settings-sidebar::-webkit-scrollbar-track,
+.settings-content::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.settings-sidebar::-webkit-scrollbar-thumb,
+.settings-content::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 3px;
+}
+
+.settings-sidebar::-webkit-scrollbar-thumb:hover,
+.settings-content::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
+
+/* Tooltips */
+.setting-label[title] {
+    position: relative;
+}
+
+.setting-label[title]:hover::after {
+    content: attr(title);
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    background: #333;
+    color: white;
+    padding: 5px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    z-index: 1000;
+    margin-bottom: 5px;
+}
+
+/* Status indicators */
+.setting-status {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-left: 8px;
+}
+
+.setting-status.enabled {
+    background-color: #28a745;
+}
+
+.setting-status.disabled {
+    background-color: #dc3545;
+}
+
+/* Preview boxes */
+.format-preview {
+    border: 1px solid #e9ecef;
+    border-radius: 4px;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 13px;
+    background: #f8f9fa;
+}
+
+.format-preview.admin {
+    border-color: #ff0000;
+    background-color: #ff000015;
+    color: #ff0000;
+}
+
+.format-preview.moderator {
+    border-color: #008000;
+    background-color: #00800015;
+    color: #008000;
+}
+
+.format-preview.vip {
+    border-color: #ffd700;
+    background-color: #ffd70015;
+    color: #b8860b;
+}
+
+.format-preview.user {
+    border-color: #ddd;
+    background-color: transparent;
+    color: #333;
+}
